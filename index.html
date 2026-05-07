@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Randomizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="tag">Online Randomizer</p>
+        <h1>Number Randomizer</h1>
+        <p>
+          Enter the amount of numbers, choose the interval and click
+          <strong>Randomize</strong> to generate the result.
+        </p>
+      </div>
+
+      <section class="info-card">
+        <h2>How does it work?</h2>
+        <p>
+          The system generates random numbers within the informed interval.
+          You can also activate the option to not repeat numbers in the result.
+        </p>
+      </section>
+    </section>
+
+    <section class="app-card">
+      <form id="form-randomize">
+        <div class="form-grid">
+          <div class="field">
+            <label for="quantity">Number quantity</label>
+            <input type="number" id="quantity" placeholder="E.g.: 5" min="1" />
+          </div>
+
+          <div class="field">
+            <label for="minimum">Minimum value</label>
+            <input type="number" id="minimum" placeholder="E.g.: 1" />
+          </div>
+
+          <div class="field">
+            <label for="maximum">Maximum value</label>
+            <input type="number" id="maximum" placeholder="E.g.: 100" />
+          </div>
+        </div>
+
+        <label class="checkbox-area">
+          <input type="checkbox" id="no-repeat" />
+          <span>Do not repeat numbers</span>
+        </label>
+
+        <button type="submit" id="btn-randomize">Randomize</button>
+      </form>
+
+      <p id="error-message" class="error"></p>
+
+      <section class="result-area">
+        <h2>Result</h2>
+        <div id="result" class="result-box">
+          <p class="empty">The randomized numbers will appear here.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
